@@ -23,4 +23,11 @@ public class FizzBuzzGameControllerTests {
         mockMvc.perform(get("/fizz-buzz/{number}", 1))
                 .andExpect(status().isNotFound());
     }
+
+    @Test
+    public void fizzBuzzGameHandlerApi_FoundTest() throws Exception {
+
+        mockMvc.perform(get("/fizz-buzz/{number}", 1))
+                .andExpect(status().isOk());
+    }
 }
