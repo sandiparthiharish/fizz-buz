@@ -6,9 +6,11 @@ import org.springframework.stereotype.Service;
 public class FizzBuzzGameService {
 
     public String getFizzBuzzGameOutput(int number) {
-        if(isMultipleOf3(number)) {
+        if(isMultipleOf3(number) && isMultipleOf5(number)) {
+            return "fizz buzz";
+        } else if(isMultipleOf3(number)) {
             return "fizz";
-        } else if(isMultipleOf5(number)) {
+        } else if (isMultipleOf5(number)) {
             return "buzz";
         }
         return String.valueOf(number);
