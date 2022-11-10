@@ -14,4 +14,10 @@ public class FizzBuzzGameServiceTests {
         FizzBuzzGameService fizzBuzzGameService = new FizzBuzzGameService();
         assertThat(fizzBuzzGameService.getFizzBuzzGameOutput(1)).isEqualTo("1");
     }
+
+    @Test
+    public void getFizzBuzzGameOutput_ReturnsFizzWithInput_3Test() {
+        FizzBuzzGameService fizzBuzzGameService = new FizzBuzzGameService();
+        assertThat(fizzBuzzGameService.getFizzBuzzGameOutput(3)).isEqualTo("fizz");
+    }
 }
