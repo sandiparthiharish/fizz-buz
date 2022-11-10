@@ -20,4 +20,10 @@ public class FizzBuzzGameServiceTests {
         FizzBuzzGameService fizzBuzzGameService = new FizzBuzzGameService();
         assertThat(fizzBuzzGameService.getFizzBuzzGameOutput(3)).isEqualTo("fizz");
     }
+
+    @Test
+    public void getFizzBuzzGameOutput_ReturnsFizzWithInputMultipleOf_3Test() {
+        FizzBuzzGameService fizzBuzzGameService = new FizzBuzzGameService();
+        assertThat(fizzBuzzGameService.getFizzBuzzGameOutput(9)).isEqualTo("fizz");
+    }
 }
